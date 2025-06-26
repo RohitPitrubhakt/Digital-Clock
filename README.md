@@ -1,5 +1,19 @@
-# Digital-Clock
-Digital Clock in Python (using Tkinter)
+# Digital-Clock Python code
+from tkinter import *
+from tkinter.ttk import *
+from time import strftime
+root =Tk()
+root.title('clock')
+def time():
+    string=strftime('%H:%M:%S:%p')
+    label.config(text=string)
+    label.after(1000,time)
+label=Label(root,font=("ds-digital",80),background="black",foreground="red")
+label.pack(anchor="center")
+time ()
+mainloop()
+
+# Digital Clock in Python (using Tkinter)
 This Python Program creates a simple digital clock using the Tkinter GUI library. It displays the current time in hours:minutes:seconds:AM/PM format with a sleek digital look.
 
  Key Features:
